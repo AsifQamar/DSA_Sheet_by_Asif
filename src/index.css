@@ -1,0 +1,81 @@
+:root {
+  --theme-bg: #0a0a0a;
+  --theme-card-bg: #161616;
+  --theme-border: #333;
+  --theme-orange: #ff5e00;
+  --theme-orange-hover: #e04f00;
+  --theme-text-main: #ffffff;
+  --theme-text-muted: #a0a0a0;
+}
+
+body {
+  background-color: var(--theme-bg);
+  color: var(--theme-text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--theme-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-orange);
+}
+
+.btn-orange {
+  background-color: var(--theme-orange);
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+.btn-orange:hover {
+  background-color: var(--theme-orange-hover);
+  color: white;
+}
+
+.card-dark {
+  background-color: var(--theme-card-bg);
+  border: 1px solid var(--theme-border);
+  color: var(--theme-text-main);
+}
+
+.question-item {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  transition: all 0.2s ease;
+}
+.question-item:hover {
+  border-color: var(--theme-orange);
+  transform: translateX(4px);
+}
+.question-item.solved {
+  background-color: #0f1c13; 
+  border-color: #1e4620;
+}
+.question-item.solved .question-title {
+  color: #888;
+}
+
+.badge-custom {
+  background-color: #222222;
+  border: 1px solid #444;
+  color: #ccc;
+}
+.btn-outline-orange {
+  color: var(--theme-orange);       
+  border: 1px solid var(--theme-orange); 
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-orange:hover {
+  background-color: var(--theme-orange); 
+  color: white;                         
+  box-shadow: 0 0 8px rgba(255, 94, 0, 0.4); 
+}
