@@ -15,7 +15,7 @@ You can view topics and sub-topics. Clicking on a topic expands it to show the l
 
 **2. Progress Tracking**
 
-* **Progress Bars:** Every topic has a progress bar. As you mark questions as "Solved," the bar fills up with an orange color.
+* **Progress Bars:** Every topic has a progress bar. As you mark questions as "Solved," the bar fills up with an green color.
 * **Visual Feedback:** When a question is solved, the text turns gray to show it is completed.
 
 **3. Drag and Drop**
