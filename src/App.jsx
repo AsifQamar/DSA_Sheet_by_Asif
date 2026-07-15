@@ -22,14 +22,30 @@ function App() {
         
         <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-5 border-bottom border-secondary pb-4">
           <div className="d-flex align-items-center gap-3">
-            <img 
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFb1lnVqiOg4LwQUB4lX-lMr0Cyl_U4CYeiasW_59ybQ&s" 
-                alt="Logo" 
-                 style={{ height: '50px', borderRadius: '4px' }} 
-            />
+            <a 
+              href="https://github.com/AsifQamar" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              title="Follow me on GitHub"
+              style={{ position: 'relative', display: 'inline-block' }}
+            >
+              <img 
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFb1lnVqiOg4LwQUB4lX-lMr0Cyl_U4CYeiasW_59ybQ&s" 
+                  alt="Logo" 
+                  style={{ height: '50px', borderRadius: '4px', cursor: 'pointer' }} 
+              />
+            </a>
             <div>
               <h1 className="fw-bolder display-6 mb-0 text-white">DSA <span style={{ color: '#ff5e00' }}>Sheet</span></h1>
               <p className="text-secondary mb-0">Master algorithms! Be consistent.</p>
+              <a 
+                href="https://github.com/AsifQamar" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ fontSize: '0.75rem', color: '#ff5e00', textDecoration: 'none' }}
+              >
+                ⭐ Click here to follow me on GitHub
+              </a>
             </div>
           </div>
           <button 
