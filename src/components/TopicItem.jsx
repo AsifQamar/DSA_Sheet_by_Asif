@@ -4,7 +4,7 @@ import { ChevronDown, ChevronRight, GripVertical } from 'lucide-react';
 import { SubTopicItem } from './SubTopicItem';
 
 export const TopicItem = ({ topic, index }) => {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const totalQuestions = topic.subTopics.reduce((acc, sub) => acc + sub.questions.length, 0);
   const solvedQuestions = topic.subTopics.reduce((acc, sub) => acc + sub.questions.filter(q=>q.isSolved).length, 0);
