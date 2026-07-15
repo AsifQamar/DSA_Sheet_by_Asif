@@ -80,7 +80,3 @@ Look at your terminal. It will show a link (usually `http://localhost:5173`). Cl
 
 ---
 
-## Acknowledgement
-
-**A special thanks to Codolio for this opportunity.**
-I really enjoyed working on this assignment. It was a great challenge that allowed me to explore drag-and-drop interfaces and state management in depth. Thank you for considering my submission!
