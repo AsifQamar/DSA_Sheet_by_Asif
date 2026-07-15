@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 
 const QuestionItem = ({ question }) => {
-  // 1. Initialize state by checking localStorage first
+  // Use the unique _id from your JSON to save the check status
   const [isChecked, setIsChecked] = useState(() => {
-    // Use question.id if available, otherwise fallback to the problem name/title
-    const uniqueKey = question.id || question.Problem || question.Title;
-    const savedStatus = localStorage.getItem(`question_${uniqueKey}`);
+    const savedStatus = localStorage.getItem(`question_${question._id}`);
     return savedStatus === 'true'; 
   });
 
-  // 2. Update state and localStorage when the checkbox is clicked
+  // Update state and localStorage when clicked
   const handleToggle = (e) => {
     const newStatus = e.target.checked;
     setIsChecked(newStatus);
-    
-    const uniqueKey = question.id || question.Problem || question.Title;
-    localStorage.setItem(`question_${uniqueKey}`, newStatus);
+    localStorage.setItem(`question_${question._id}`, newStatus);
   };
+
+  // Safely extract the problem name and URL based on your JSON structure
+  const problemName = question.title || (question.questionId && question.questionId.name) || 'Unknown Question';
+  const problemUrl = (question.questionId && question.questionId.problemUrl) || '#';
 
   return (
     <div className="question-item">
@@ -27,9 +27,8 @@ const QuestionItem = ({ question }) => {
           onChange={handleToggle} 
         />
         
-        {/* Displays the question name and links to the problem */}
         <a 
-          href={question.URL || question.Link || '#'} 
+          href={problemUrl} 
           target="_blank" 
           rel="noopener noreferrer"
           style={{
@@ -37,7 +36,7 @@ const QuestionItem = ({ question }) => {
             color: isChecked ? 'gray' : 'inherit'
           }}
         >
-          {question.Problem || question.Title || 'Unknown Question'}
+          {problemName}
         </a>
       </label>
     </div>
